@@ -1,0 +1,4 @@
+(library
+ (name driver)
+ (public_name compiler.driver)
+ (libraries common lexer parser))

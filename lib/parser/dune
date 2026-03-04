@@ -1,0 +1,5 @@
+(library
+ (name parser)
+ (public_name compiler.parser)
+ (modules ast parser)
+ (libraries lexer))

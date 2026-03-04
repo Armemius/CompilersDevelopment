@@ -1,3 +1,5 @@
+open Driver
+
 let () =
   if Array.length Sys.argv < 2 then (
     prerr_endline "Usage: compiler <source_file>";
@@ -18,5 +20,4 @@ let () =
       exit 1
   in
 
-  print_endline "File content:";
-  print_endline content
+  Pipeline.compile content
