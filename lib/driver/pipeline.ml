@@ -7,4 +7,5 @@ let build_ast source =
   Parser.parse tokens
 
 let compile source =
-  ignore (build_ast source)
+  let ast = build_ast source in
+  print_string (Parser.string_of_program ast)
