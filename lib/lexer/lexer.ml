@@ -1,5 +1,7 @@
 open Token
 
+module Token = Token
+
 type t = {
   input : string;
   length : int;

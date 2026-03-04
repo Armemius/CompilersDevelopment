@@ -1,8 +1,10 @@
-open Common
 open Lexer
 open Parser
 
-let compile (_source: string) =
-  let lexer = Lexer.create _source in
+let build_ast source =
+  let lexer = Lexer.create source in
   let tokens = Lexer.tokenize lexer in
-  print_tokens tokens
+  Parser.parse tokens
+
+let compile source =
+  ignore (build_ast source)
